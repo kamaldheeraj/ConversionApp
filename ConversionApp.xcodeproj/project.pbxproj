@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		558EA8B51BC42A4D00A07E72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558EA8B41BC42A4D00A07E72 /* AppDelegate.swift */; };
-		558EA8B71BC42A4D00A07E72 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558EA8B61BC42A4D00A07E72 /* FirstViewController.swift */; };
-		558EA8B91BC42A4D00A07E72 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558EA8B81BC42A4D00A07E72 /* SecondViewController.swift */; };
+		558EA8B71BC42A4D00A07E72 /* MassConversionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558EA8B61BC42A4D00A07E72 /* MassConversionVC.swift */; };
+		558EA8B91BC42A4D00A07E72 /* TemperatureConversionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558EA8B81BC42A4D00A07E72 /* TemperatureConversionVC.swift */; };
 		558EA8BC1BC42A4D00A07E72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 558EA8BA1BC42A4D00A07E72 /* Main.storyboard */; };
 		558EA8BE1BC42A4D00A07E72 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 558EA8BD1BC42A4D00A07E72 /* Images.xcassets */; };
 		558EA8C11BC42A4D00A07E72 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 558EA8BF1BC42A4D00A07E72 /* LaunchScreen.xib */; };
 		558EA8CD1BC42A4D00A07E72 /* ConversionAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558EA8CC1BC42A4D00A07E72 /* ConversionAppTests.swift */; };
+		CFD264691BC49EE1004A5397 /* StringEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD264681BC49EE1004A5397 /* StringEx.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,14 +31,15 @@
 		558EA8AF1BC42A4D00A07E72 /* ConversionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConversionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		558EA8B31BC42A4D00A07E72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		558EA8B41BC42A4D00A07E72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		558EA8B61BC42A4D00A07E72 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		558EA8B81BC42A4D00A07E72 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		558EA8B61BC42A4D00A07E72 /* MassConversionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MassConversionVC.swift; sourceTree = "<group>"; };
+		558EA8B81BC42A4D00A07E72 /* TemperatureConversionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureConversionVC.swift; sourceTree = "<group>"; };
 		558EA8BB1BC42A4D00A07E72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		558EA8BD1BC42A4D00A07E72 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		558EA8C01BC42A4D00A07E72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		558EA8C61BC42A4D00A07E72 /* ConversionAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConversionAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		558EA8CB1BC42A4D00A07E72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		558EA8CC1BC42A4D00A07E72 /* ConversionAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionAppTests.swift; sourceTree = "<group>"; };
+		CFD264681BC49EE1004A5397 /* StringEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringEx.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +82,9 @@
 			isa = PBXGroup;
 			children = (
 				558EA8B41BC42A4D00A07E72 /* AppDelegate.swift */,
-				558EA8B61BC42A4D00A07E72 /* FirstViewController.swift */,
-				558EA8B81BC42A4D00A07E72 /* SecondViewController.swift */,
+				CFD264681BC49EE1004A5397 /* StringEx.swift */,
+				558EA8B61BC42A4D00A07E72 /* MassConversionVC.swift */,
+				558EA8B81BC42A4D00A07E72 /* TemperatureConversionVC.swift */,
 				558EA8BA1BC42A4D00A07E72 /* Main.storyboard */,
 				558EA8BD1BC42A4D00A07E72 /* Images.xcassets */,
 				558EA8BF1BC42A4D00A07E72 /* LaunchScreen.xib */,
@@ -215,9 +218,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				558EA8B91BC42A4D00A07E72 /* SecondViewController.swift in Sources */,
+				558EA8B91BC42A4D00A07E72 /* TemperatureConversionVC.swift in Sources */,
+				CFD264691BC49EE1004A5397 /* StringEx.swift in Sources */,
 				558EA8B51BC42A4D00A07E72 /* AppDelegate.swift in Sources */,
-				558EA8B71BC42A4D00A07E72 /* FirstViewController.swift in Sources */,
+				558EA8B71BC42A4D00A07E72 /* MassConversionVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +419,7 @@
 				558EA8D21BC42A4D00A07E72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		558EA8D31BC42A4D00A07E72 /* Build configuration list for PBXNativeTarget "ConversionAppTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +428,7 @@
 				558EA8D51BC42A4D00A07E72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

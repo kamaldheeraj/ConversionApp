@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  SecondViewController.swift
 //  ConversionApp
 //
 //  Created by Navya Rayala on 10/6/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class TemperatureConversionVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
