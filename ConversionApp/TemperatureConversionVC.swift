@@ -8,15 +8,28 @@
 
 import UIKit
 
-class TemperatureConversionVC: UIViewController {
-    var values = [Int]()
-    
+class TemperatureConversionVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate  {
+    //var values = [Int]()
     var part = 0
-
+    var index = 0
+    var newTemperature = 0.0
+    var values = (-129...134).map {$0}
+    var endStr = "°F"
+    var endLabelStr = "°C"
+    
+    var numberFormatter = NSNumberFormatter()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    }
+        //var numberFormatter = NSNumberFormatter()
+        
+//        numberFormatter.numberStyle = NSNumberFormatterStyle.NoStyle
+//        newTemperature = convertTemp(values[pickerTemperature.selectedRowInComponent(0)], boolInFaren: true)
+//        outLabel.text=(numberFormatter.stringFromNumber(newTemperature))!+endLabelStr
+        
+        segmentedControlChanged2(segmentedControl2)
+            }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -33,51 +46,77 @@ class TemperatureConversionVC: UIViewController {
     @IBAction func segmentedControlChanged2(sender: AnyObject) {
         
         if sender.selectedSegmentIndex == 0{
-            
-            values = [1, 2, 3]
-            
-            
-
-            part = 1
-            
+           
+         values = (-129...134).map {$0}
+            endStr="°F"
+            endLabelStr="°C"
+            pickerTemperature.reloadAllComponents()
+            numberFormatter.numberStyle = NSNumberFormatterStyle.NoStyle
+            newTemperature = convertTemp(values[pickerTemperature.selectedRowInComponent(0)], boolInFaren: true)
+            outLabel.text=(numberFormatter.stringFromNumber(newTemperature))!+endLabelStr
+           
             //F to C code goes here
         }
-        else
+        else if sender.selectedSegmentIndex == 1
         {
-            
-            values = [4,5,6]
-            
-            part = 2
-            //C to F code goes here
+           values = (-90...57).map {$0}
+            endStr="°C"
+            endLabelStr="°F"
+            pickerTemperature.reloadAllComponents()
+            numberFormatter.numberStyle = NSNumberFormatterStyle.NoStyle
+            newTemperature = convertTemp(values[pickerTemperature.selectedRowInComponent(0)], boolInFaren: false)
+            outLabel.text=(numberFormatter.stringFromNumber(newTemperature))!+endLabelStr
+                        //C to F code goes here
             
         }
         
     }
-    
-    
+
+
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
     
-    func pickerTemperature(_pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
         return values.count
     }
     
-    func pickerTemperature(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return values[row].description
         
     }
-    func pickerTemperature(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
-        var newTemperature = 0.0
-        
-            var temperature = values[row]
-        
-        
-        newTemperature = Double(temperature)
-        
-        outLabel.text = newTemperature.description
+    
 
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
+       
+            var temperature = values[row]
+        var boolInFaren = true
         
+        if(segmentedControl2.selectedSegmentIndex==0){
+            boolInFaren = true
+        }
+        else{
+            boolInFaren = false
+        }
+        newTemperature=convertTemp(temperature, boolInFaren: boolInFaren)
+        
+                outLabel.text = (numberFormatter.stringFromNumber(newTemperature))!+endLabelStr
+        
+    }
+    
+    func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        var mutString = values[row].description+endStr
+        return NSMutableAttributedString(string: mutString)
+    }
+    func convertTemp(temperature:Int, boolInFaren:Bool)->Double{
+        if(boolInFaren){
+            return (Double(temperature)-32.0)/1.8
+        }
+        else
+        {
+            return Double(temperature)*1.8 + 32
+        }
+
     }
     
     

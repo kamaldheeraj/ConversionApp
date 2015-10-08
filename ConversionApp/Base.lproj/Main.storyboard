@@ -126,23 +126,31 @@
                                     <action selector="segmentedControlChanged2:" destination="8rJ-Kc-sve" eventType="valueChanged" id="lUt-v0-VVd"/>
                                 </connections>
                             </segmentedControl>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tx1-VU-YTw">
-                                <rect key="frame" x="16" y="133" width="568" height="162"/>
-                            </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDL-DH-eP9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDL-DH-eP9">
                                 <rect key="frame" x="279" y="362" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tx1-VU-YTw">
+                                <rect key="frame" x="213" y="132" width="175" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="175" id="MuZ-Wq-yrF"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="8rJ-Kc-sve" id="zpH-Vk-S2H"/>
+                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="bG6-sI-xH8"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Tx1-VU-YTw" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="2yj-sz-JuS"/>
-                            <constraint firstItem="Tx1-VU-YTw" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="CsZ-qe-aOs"/>
-                            <constraint firstItem="5pl-SC-HLI" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="8" symbolic="YES" id="coS-yk-oFy"/>
-                            <constraint firstItem="Tx1-VU-YTw" firstAttribute="centerX" secondItem="5pl-SC-HLI" secondAttribute="centerX" id="mCv-n6-rJQ"/>
-                            <constraint firstItem="Tx1-VU-YTw" firstAttribute="top" secondItem="5pl-SC-HLI" secondAttribute="bottom" constant="77" id="v03-AP-8Y3"/>
+                            <constraint firstItem="5pl-SC-HLI" firstAttribute="centerX" secondItem="Tx1-VU-YTw" secondAttribute="centerX" id="8He-SF-6pG"/>
+                            <constraint firstItem="Tx1-VU-YTw" firstAttribute="top" secondItem="5pl-SC-HLI" secondAttribute="bottom" constant="76" id="Nmq-0v-fRc"/>
+                            <constraint firstItem="JDL-DH-eP9" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="Sc4-rX-mFt"/>
+                            <constraint firstItem="5pl-SC-HLI" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="8" symbolic="YES" id="U3B-TP-GZd"/>
+                            <constraint firstItem="Tx1-VU-YTw" firstAttribute="centerX" secondItem="JDL-DH-eP9" secondAttribute="centerX" id="fV8-je-ws7"/>
+                            <constraint firstItem="JDL-DH-eP9" firstAttribute="top" secondItem="Tx1-VU-YTw" secondAttribute="bottom" constant="68" id="iLG-db-Y9n"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Temperature" image="Temperature" id="cPa-gy-q4n"/>
