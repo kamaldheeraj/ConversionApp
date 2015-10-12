@@ -14,6 +14,7 @@
 		558EA8BE1BC42A4D00A07E72 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 558EA8BD1BC42A4D00A07E72 /* Images.xcassets */; };
 		558EA8C11BC42A4D00A07E72 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 558EA8BF1BC42A4D00A07E72 /* LaunchScreen.xib */; };
 		558EA8CD1BC42A4D00A07E72 /* ConversionAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558EA8CC1BC42A4D00A07E72 /* ConversionAppTests.swift */; };
+		682E9D8E1BCBF97A0004DAED /* DistanceConversionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682E9D8D1BCBF97A0004DAED /* DistanceConversionVC.swift */; };
 		CFD264691BC49EE1004A5397 /* StringEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD264681BC49EE1004A5397 /* StringEx.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		558EA8C61BC42A4D00A07E72 /* ConversionAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConversionAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		558EA8CB1BC42A4D00A07E72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		558EA8CC1BC42A4D00A07E72 /* ConversionAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionAppTests.swift; sourceTree = "<group>"; };
+		682E9D8D1BCBF97A0004DAED /* DistanceConversionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceConversionVC.swift; sourceTree = "<group>"; };
 		CFD264681BC49EE1004A5397 /* StringEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringEx.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +87,7 @@
 				CFD264681BC49EE1004A5397 /* StringEx.swift */,
 				558EA8B61BC42A4D00A07E72 /* MassConversionVC.swift */,
 				558EA8B81BC42A4D00A07E72 /* TemperatureConversionVC.swift */,
+				682E9D8D1BCBF97A0004DAED /* DistanceConversionVC.swift */,
 				558EA8BA1BC42A4D00A07E72 /* Main.storyboard */,
 				558EA8BD1BC42A4D00A07E72 /* Images.xcassets */,
 				558EA8BF1BC42A4D00A07E72 /* LaunchScreen.xib */,
@@ -219,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				558EA8B91BC42A4D00A07E72 /* TemperatureConversionVC.swift in Sources */,
+				682E9D8E1BCBF97A0004DAED /* DistanceConversionVC.swift in Sources */,
 				CFD264691BC49EE1004A5397 /* StringEx.swift in Sources */,
 				558EA8B51BC42A4D00A07E72 /* AppDelegate.swift in Sources */,
 				558EA8B71BC42A4D00A07E72 /* MassConversionVC.swift in Sources */,

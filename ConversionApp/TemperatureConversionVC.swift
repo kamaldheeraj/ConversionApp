@@ -9,6 +9,8 @@
 import UIKit
 
 class TemperatureConversionVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate  {
+    
+    
     //var values = [Int]()
     var part = 0
     var index = 0
@@ -28,8 +30,15 @@ class TemperatureConversionVC: UIViewController, UIPickerViewDataSource, UIPicke
 //        newTemperature = convertTemp(values[pickerTemperature.selectedRowInComponent(0)], boolInFaren: true)
 //        outLabel.text=(numberFormatter.stringFromNumber(newTemperature))!+endLabelStr
         
+        
+        
         segmentedControlChanged2(segmentedControl2)
             }
+    override func supportedInterfaceOrientations() -> Int {
+        return Int(UIInterfaceOrientationMask.All.rawValue)
+    }
+    
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -62,6 +71,7 @@ class TemperatureConversionVC: UIViewController, UIPickerViewDataSource, UIPicke
            values = (-90...57).map {$0}
             endStr="°C"
             endLabelStr="°F"
+            pickerTemperature.reloadInputViews()
             pickerTemperature.reloadAllComponents()
             numberFormatter.numberStyle = NSNumberFormatterStyle.NoStyle
             newTemperature = convertTemp(values[pickerTemperature.selectedRowInComponent(0)], boolInFaren: false)
