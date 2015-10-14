@@ -34,11 +34,13 @@ class TemperatureConversionVC: UIViewController, UIPickerViewDataSource, UIPicke
         
         segmentedControlChanged2(segmentedControl2)
             }
-    override func supportedInterfaceOrientations() -> Int {
-        return Int(UIInterfaceOrientationMask.All.rawValue)
-    }
-    
-
+//    override func supportedInterfaceOrientations() -> Int {
+//        return Int(UIInterfaceOrientationMask.All.rawValue)
+//    }
+//    
+//    override func shouldAutorotate() -> Bool {
+//        return true
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

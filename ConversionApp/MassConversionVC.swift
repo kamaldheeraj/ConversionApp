@@ -10,9 +10,12 @@ import UIKit
 
 class MassConversionVC: UIViewController {
     
-    override func supportedInterfaceOrientations() -> Int {
-        return Int(UIInterfaceOrientationMask.All.rawValue)
-    }
+//    override func supportedInterfaceOrientations() -> Int {
+//        return Int(UIInterfaceOrientationMask.All.rawValue)
+//    }
+//    override func shouldAutorotate() -> Bool {
+//        return true
+//    }
     
     let poundToKilogram = 0.453592
     let kilogramToPound = 2.20462

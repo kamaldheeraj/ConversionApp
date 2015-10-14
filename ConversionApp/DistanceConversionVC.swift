@@ -31,10 +31,12 @@ class DistanceConversionVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func supportedInterfaceOrientations() -> Int {
-        return Int(UIInterfaceOrientationMask.All.rawValue)
-    }
-    
+//    override func supportedInterfaceOrientations() -> Int {
+//        return Int(UIInterfaceOrientationMask.All.rawValue)
+//    }
+//    override func shouldAutorotate() -> Bool {
+//        return true
+//    }
 
     
     @IBAction func clearPressed(sender: AnyObject) {
