@@ -2,8 +2,8 @@
 //  DistanceConversionVC.swift
 //  ConversionApp
 //
-//  Created by Pravin Kandala on 10/12/15.
-//  Copyright (c) 2015 Kamal Dandamudi. All rights reserved.
+///  Created by Pravin Kandala, Kamal Dandamudi on 10/12/15.
+//  Copyright (c) 2015  All rights reserved.
 //
 
 import UIKit

@@ -91,7 +91,7 @@
                             <constraint firstItem="YNg-t5-t50" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" id="yKx-wv-jDD"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Mass" image="Mass" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Mass" image="Scales-25" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="changedLabel" destination="AMx-bz-6M7" id="4Ax-wK-Cm5"/>
                         <outlet property="changingFromLabel" destination="joT-oE-kTc" id="5bf-xM-P9q"/>
@@ -157,7 +157,7 @@
                             <constraint firstItem="JDL-DH-eP9" firstAttribute="centerX" secondItem="Tx1-VU-YTw" secondAttribute="centerX" id="jpz-Kq-5Fi"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Temperature" image="Temperature" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Temperature" image="Temperature-25" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="outLabel" destination="JDL-DH-eP9" id="3hJ-vb-DX0"/>
                         <outlet property="pickerTemperature" destination="Tx1-VU-YTw" id="Wxd-iV-Lj1"/>
@@ -279,7 +279,7 @@
                             <constraint firstItem="add-aX-bP0" firstAttribute="baseline" secondItem="zZp-TB-j7R" secondAttribute="baseline" id="piR-f2-gX4"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Distance" image="Distance" id="7aK-Ka-xLu"/>
+                    <tabBarItem key="tabBarItem" title="Distance" image="Length-25" id="7aK-Ka-xLu"/>
                     <connections>
                         <outlet property="changedLabel" destination="QUH-pS-GN1" id="IJ7-ty-r0W"/>
                         <outlet property="changingFromLabel" destination="a3n-R7-wJm" id="qau-Cw-xyR"/>
@@ -294,8 +294,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Distance" width="26" height="26"/>
-        <image name="Mass" width="25" height="25"/>
-        <image name="Temperature" width="25" height="25"/>
+        <image name="Length-25" width="25" height="25"/>
+        <image name="Scales-25" width="25" height="25"/>
+        <image name="Temperature-25" width="25" height="25"/>
     </resources>
 </document>
