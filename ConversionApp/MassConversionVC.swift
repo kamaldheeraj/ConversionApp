@@ -29,6 +29,9 @@ class MassConversionVC: UIViewController {
     @IBOutlet weak var changedLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
+        view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view, typically from a nib.
     }
     
