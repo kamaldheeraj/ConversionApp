@@ -93,6 +93,9 @@
                             <constraint firstItem="Egg-Fh-UED" firstAttribute="top" secondItem="JcJ-Jb-yfH" secondAttribute="top" id="kdj-a5-FQu"/>
                             <constraint firstItem="YNg-t5-t50" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" id="yKx-wv-jDD"/>
                         </constraints>
+                        <connections>
+                            <action selector="viewClicked:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Pty-Yj-SYO"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Mass" image="Scales-25" id="acW-dT-cKf"/>
                     <connections>
@@ -200,7 +203,7 @@
                         <viewControllerLayoutGuide type="top" id="LKA-Kj-VBi"/>
                         <viewControllerLayoutGuide type="bottom" id="fkP-pX-Jsa"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="q1c-8f-Wg0">
+                    <view key="view" contentMode="scaleToFill" id="q1c-8f-Wg0" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -285,6 +288,9 @@
                             <constraint firstItem="QUH-pS-GN1" firstAttribute="baseline" secondItem="A2o-Up-OX8" secondAttribute="baseline" id="kqu-dh-Otv"/>
                             <constraint firstItem="add-aX-bP0" firstAttribute="baseline" secondItem="zZp-TB-j7R" secondAttribute="baseline" id="piR-f2-gX4"/>
                         </constraints>
+                        <connections>
+                            <action selector="viewClicked:" destination="cte-5b-WXm" eventType="touchUpInside" id="bWg-nx-Jyj"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Distance" image="Length-25" id="7aK-Ka-xLu"/>
                     <connections>

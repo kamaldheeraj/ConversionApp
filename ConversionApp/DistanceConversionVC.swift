@@ -85,5 +85,8 @@ class DistanceConversionVC: UIViewController {
         
     }
 
+    @IBAction func viewClicked(sender: AnyObject) {
+        view.endEditing(true)
+    }
 
 }

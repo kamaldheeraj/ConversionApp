@@ -44,11 +44,17 @@ class MassConversionVC: UIViewController {
         numberFormatter.numberStyle = NSNumberFormatterStyle.DecimalStyle
         return numberFormatter.stringFromNumber(value * usingFactor)!
     }
+    
+    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         convertPressed(convertButton)
         return true
         
+    }
+    
+    @IBAction func viewClicked(sender: AnyObject) {
+        view.endEditing(true)
     }
     
     @IBAction func convertPressed(sender: AnyObject) {
@@ -69,6 +75,8 @@ class MassConversionVC: UIViewController {
             //changedLabel.text="0"
         }
     }
+    
+    
     @IBAction func segmentControlChanged(sender: UISegmentedControl) {
         changedLabel.text="0"
         changingTextField.text=""
