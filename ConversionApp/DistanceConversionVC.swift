@@ -20,12 +20,11 @@ class DistanceConversionVC: UIViewController {
     
     @IBOutlet weak var changingTextField: UITextField!
     
+    @IBOutlet weak var convertButton: UIButton!
     @IBOutlet weak var changedLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        var tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
-        view.addGestureRecognizer(tap)
+
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -34,13 +33,12 @@ class DistanceConversionVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-//    override func supportedInterfaceOrientations() -> Int {
-//        return Int(UIInterfaceOrientationMask.All.rawValue)
-//    }
-//    override func shouldAutorotate() -> Bool {
-//        return true
-//    }
-
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        convertPressed(convertButton)
+        return true
+        
+    }
     
     @IBAction func clearPressed(sender: AnyObject) {
         changingTextField.text=""

@@ -9,7 +9,7 @@
 import UIKit
 
 class TemperatureConversionVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate  {
-    
+  
     
     //var values = [Int]()
     var part = 0
@@ -23,34 +23,16 @@ class TemperatureConversionVC: UIViewController, UIPickerViewDataSource, UIPicke
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        var tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
-        view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view, typically from a nib.
-        //var numberFormatter = NSNumberFormatter()
-        
-//        numberFormatter.numberStyle = NSNumberFormatterStyle.NoStyle
-//        newTemperature = convertTemp(values[pickerTemperature.selectedRowInComponent(0)], boolInFaren: true)
-//        outLabel.text=(numberFormatter.stringFromNumber(newTemperature))!+endLabelStr
-        
-        
         
         segmentedControlChanged2(segmentedControl2)
             }
-//    override func supportedInterfaceOrientations() -> Int {
-//        return Int(UIInterfaceOrientationMask.All.rawValue)
-//    }
-//    
-//    override func shouldAutorotate() -> Bool {
-//        return true
-//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-//code goes here
     
     @IBOutlet weak var segmentedControl2: UISegmentedControl!
     @IBOutlet weak var pickerTemperature: UIPickerView!
@@ -81,7 +63,6 @@ class TemperatureConversionVC: UIViewController, UIPickerViewDataSource, UIPicke
             numberFormatter.numberStyle = NSNumberFormatterStyle.NoStyle
             newTemperature = convertTemp(values[pickerTemperature.selectedRowInComponent(0)], boolInFaren: false)
             outLabel.text=(numberFormatter.stringFromNumber(newTemperature))!+endLabelStr
-                        //C to F code goes here
             
         }
         

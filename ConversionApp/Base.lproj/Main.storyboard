@@ -13,7 +13,7 @@
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -37,6 +37,9 @@
                                 <rect key="frame" x="241" y="75" width="343" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="Nfj-m5-Ctz"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Egg-Fh-UED">
                                 <rect key="frame" x="16" y="175" width="55" height="30"/>
@@ -97,6 +100,7 @@
                         <outlet property="changingFromLabel" destination="joT-oE-kTc" id="5bf-xM-P9q"/>
                         <outlet property="changingTextField" destination="hv4-F2-iwm" id="dJg-SE-DPt"/>
                         <outlet property="changingToLabel" destination="530-iB-VuT" id="9EU-w0-zSZ"/>
+                        <outlet property="convertButton" destination="Egg-Fh-UED" id="NlF-Ob-QWc"/>
                         <outlet property="segmentedControl" destination="YNg-t5-t50" id="T2Z-k8-C4J"/>
                     </connections>
                 </viewController>
@@ -221,6 +225,9 @@
                                 <rect key="frame" x="272" y="74" width="312" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="cte-5b-WXm" id="hvD-WY-bLr"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZp-TB-j7R">
                                 <rect key="frame" x="16" y="174" width="55" height="30"/>
@@ -285,6 +292,7 @@
                         <outlet property="changingFromLabel" destination="a3n-R7-wJm" id="qau-Cw-xyR"/>
                         <outlet property="changingTextField" destination="WDM-go-zGP" id="aCv-ar-sgf"/>
                         <outlet property="changingToLabel" destination="A2o-Up-OX8" id="Siz-fj-Bjx"/>
+                        <outlet property="convertButton" destination="zZp-TB-j7R" id="aYP-R6-Yfo"/>
                         <outlet property="segmentedControl" destination="g0e-EX-Hxr" id="JCw-O9-3ZC"/>
                     </connections>
                 </viewController>

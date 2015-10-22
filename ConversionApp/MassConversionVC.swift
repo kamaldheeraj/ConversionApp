@@ -10,13 +10,6 @@ import UIKit
 
 class MassConversionVC: UIViewController {
     
-//    override func supportedInterfaceOrientations() -> Int {
-//        return Int(UIInterfaceOrientationMask.All.rawValue)
-//    }
-//    override func shouldAutorotate() -> Bool {
-//        return true
-//    }
-    
     let poundToKilogram = 0.453592
     let kilogramToPound = 2.20462
     
@@ -24,14 +17,13 @@ class MassConversionVC: UIViewController {
     @IBOutlet weak var changingFromLabel: UILabel!
     @IBOutlet weak var changingToLabel: UILabel!
     
+    @IBOutlet weak var convertButton: UIButton!
     @IBOutlet weak var changingTextField: UITextField!
     
     @IBOutlet weak var changedLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        var tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
-        view.addGestureRecognizer(tap)
+
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -52,7 +44,12 @@ class MassConversionVC: UIViewController {
         numberFormatter.numberStyle = NSNumberFormatterStyle.DecimalStyle
         return numberFormatter.stringFromNumber(value * usingFactor)!
     }
-    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        convertPressed(convertButton)
+        return true
+        
+    }
     
     @IBAction func convertPressed(sender: AnyObject) {
         var numberFormatter = NSNumberFormatter()
