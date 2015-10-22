@@ -9,30 +9,27 @@
 import UIKit
 
 class MassConversionVC: UIViewController {
-    
+    //Constants for conversion factors
     let poundToKilogram = 0.453592
     let kilogramToPound = 2.20462
     
+    // Referencing Outlets for different UI components
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var changingFromLabel: UILabel!
     @IBOutlet weak var changingToLabel: UILabel!
-    
     @IBOutlet weak var convertButton: UIButton!
     @IBOutlet weak var changingTextField: UITextField!
-    
     @IBOutlet weak var changedLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    
+    // Funtion for Button to reset values in Text Fields
     @IBAction func clearPressed(sender: AnyObject) {
         changingTextField.text=""
         changedLabel.text="0"
@@ -45,7 +42,7 @@ class MassConversionVC: UIViewController {
         return numberFormatter.stringFromNumber(value * usingFactor)!
     }
     
-    
+    //On click of Return button on keyboard, keyboard is resigned and the value is converted
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         convertPressed(convertButton)
@@ -53,21 +50,27 @@ class MassConversionVC: UIViewController {
         
     }
     
+    // On click of anywhere in the view keyboard is resigned
     @IBAction func viewClicked(sender: AnyObject) {
         view.endEditing(true)
     }
     
+    //Function for Button that triggers conversion
     @IBAction func convertPressed(sender: AnyObject) {
+        //Number formatter for decimal style
         var numberFormatter = NSNumberFormatter()
         numberFormatter.numberStyle = NSNumberFormatterStyle.DecimalStyle
+        //Using toDouble function from StringEx.swift
         if let number=changingTextField.text.toDouble() {
             if segmentedControl.selectedSegmentIndex==1{
+                //Calling convertMassFrom function based on the segment currently selected.
                 changedLabel.text = convertMassFrom(number, usingFactor: kilogramToPound)
             }
             else{
                 changedLabel.text = convertMassFrom(number, usingFactor: poundToKilogram)
             }
         }
+        //If anything other than decimal numbers are entered an alert view is displayed.
         else {
             let alert = UIAlertView(title: "Error", message: "Please enter a number", delegate: nil, cancelButtonTitle: "OK")
             alert.show()
@@ -76,7 +79,7 @@ class MassConversionVC: UIViewController {
         }
     }
     
-    
+    //Function to swap text fields' text on changing the segemented control
     @IBAction func segmentControlChanged(sender: UISegmentedControl) {
         changedLabel.text="0"
         changingTextField.text=""
